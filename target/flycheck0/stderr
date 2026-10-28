@@ -1,0 +1,4 @@
+    Checking doubly_linked_list v0.1.0 (/home/localadmin/exercism/rust/doubly-linked-list)
+error: could not compile `doubly_linked_list` (lib test) due to 8 previous errors
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `doubly_linked_list` (lib) due to 8 previous errors

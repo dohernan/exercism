@@ -1,0 +1,11 @@
+{
+    "rust-analyzer.server.extraEnv": {
+        "PATH": "/home/localadmin/.cargo/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    },
+    "rust-analyzer.runnables.command": "/home/localadmin/.cargo/bin/cargo",
+    "lldb.cargo": "/home/localadmin/.cargo/bin/cargo",
+    "rust-analyzer.debug.engine": "vadimcn.vscode-lldb",
+    "rust-analyzer.runnables.extraEnv": {
+        "PATH": "/home/localadmin/.cargo/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    }
+}

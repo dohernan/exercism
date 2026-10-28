@@ -1,0 +1,72 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${fileDirname}",
+        "env": {
+            "PATH": "${env:HOME}/.cargo/bin:${env:PATH}"
+        }
+    },
+    "tasks": [
+        {
+            "label": "cargo run",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["run"],
+            "problemMatcher": ["$rustc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "cargo build",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["build"],
+            "problemMatcher": ["$rustc"],
+            "group": "build"
+        },
+        {
+            "label": "cargo run --release",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["run", "--release"],
+            "problemMatcher": ["$rustc"],
+            "group": "build"
+        },
+        {
+            "label": "cargo test",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["test"],
+            "problemMatcher": ["$rustc"],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "cargo test (all, incl. ignored)",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["test", "--", "--include-ignored"],
+            "problemMatcher": ["$rustc"],
+            "group": "test"
+        },
+        {
+            "label": "cargo test (only ignored)",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["test", "--", "--ignored"],
+            "problemMatcher": ["$rustc"],
+            "group": "test"
+        },
+        {
+            "label": "cargo check",
+            "type": "shell",
+            "command": "cargo",
+            "args": ["check"],
+            "problemMatcher": ["$rustc"]
+        }
+    ]
+}

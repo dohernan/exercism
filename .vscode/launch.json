@@ -1,0 +1,31 @@
+{
+    // Debug configurations for CodeLLDB (vadimcn.vscode-lldb).
+    // They build and debug the exercise that contains the currently open file.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug tests (all, incl. ignored)",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": ["test", "--no-run"],
+                "cwd": "${fileDirname}",
+                "filter": { "kind": "test" }
+            },
+            "args": ["--include-ignored"],
+            "cwd": "${fileDirname}"
+        },
+        {
+            "name": "Debug tests (default, skip ignored)",
+            "type": "lldb",
+            "request": "launch",
+            "cargo": {
+                "args": ["test", "--no-run"],
+                "cwd": "${fileDirname}",
+                "filter": { "kind": "test" }
+            },
+            "args": [],
+            "cwd": "${fileDirname}"
+        }
+    ]
+}
